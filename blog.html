@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>勉強日記 | どうぶつ勉強ノート</title>
+<meta name="description" content="動物の勉強の進捗を、日付と日記だけでゆるく記録するページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#8b008b;
+  --purple-deep:#4d004d;
+  --purple-soft:#f7ecf7;
+  --purple-line:#e2c3e2;
+  --yellow:#ffd21f;
+  --ink:#2b1030;
+  --paper:#fffafd;
+  --display:"Dela Gothic One","Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.85}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto}
+
+/* header */
+header{background:var(--purple-deep);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding:14px 0}
+.logo{font-family:var(--display);font-size:1.15rem;text-decoration:none;letter-spacing:.04em}
+.logo span{color:var(--yellow)}
+nav ul{display:flex;flex-wrap:wrap;gap:4px 8px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:6px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.14)}
+nav a[aria-current="page"]{background:var(--yellow);color:var(--purple-deep)}
+
+/* page title */
+.pagehead{background:var(--purple);color:#fff}
+.pagehead .wrap{padding:48px 0 52px}
+.pagehead h1{font-family:var(--display);font-weight:400;font-size:clamp(2rem,6vw,3.2rem);line-height:1.3;margin:0 0 8px;border-bottom:8px solid var(--yellow);display:inline-block}
+.pagehead p{margin:14px 0 0;max-width:32em}
+
+/* timeline */
+main{padding:48px 0 72px}
+.timeline{list-style:none;margin:0 auto;padding:0;max-width:680px;border:2px solid var(--purple);border-radius:20px;background:#fff;overflow:hidden}
+.timeline li{padding:22px 26px;border-top:1px solid var(--purple-line)}
+.timeline li:first-child{border-top:0}
+.timeline li:hover{background:var(--purple-soft)}
+.timeline time{display:block;font-size:.88rem;font-weight:700;color:var(--purple)}
+.timeline p{margin:4px 0 0;white-space:pre-line}
+.note{max-width:680px;margin:20px auto 0;font-size:.9rem;color:var(--purple)}
+
+footer{background:var(--purple-deep);color:#fff;padding:32px 0;text-align:center;font-size:.9rem}
+footer a{color:var(--yellow)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">どうぶつ<span>勉強</span>ノート</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html" aria-current="page">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="wrap">
+    <h1>勉強日記</h1>
+    <p>勉強の進捗を、日付とひとことで記録しています。新しい日記が上に並びます。</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <ul class="timeline">
+      <!-- 新しい日記は、下の <li> をコピーして一番上に貼り付けてください -->
+      <li>
+        <time datetime="2026-09-30">2026年9月30日</time>
+        <p>ここに日記が入ります。今日勉強した動物のことを書いてみましょう。</p>
+      </li>
+      <li>
+        <time datetime="2026-09-29">2026年9月29日</time>
+        <p>ここに日記が入ります。気になった疑問や、次に調べたいことなども。</p>
+      </li>
+      <li>
+        <time datetime="2026-09-28">2026年9月28日</time>
+        <p>ここに日記が入ります。改行もそのまま反映されます。
+二行目はこんな感じです。</p>
+      </li>
+      <li>
+        <time datetime="2026-09-27">2026年9月27日</time>
+        <p>ここに日記が入ります。</p>
+      </li>
+      <li>
+        <time datetime="2026-09-26">2026年9月26日</time>
+        <p>ここに日記が入ります。</p>
+      </li>
+    </ul>
+    <p class="note">日記が増えたら、ここに「前の月へ」などのリンクを足せます。</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 どうぶつ勉強ノート　／　<a href="about.html">このサイトについて</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
